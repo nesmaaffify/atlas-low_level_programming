@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdio.h
->
+#include <stdio.h>
 **
 * main - entry_point
 * return: always 0
