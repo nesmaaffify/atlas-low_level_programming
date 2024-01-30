@@ -1,24 +1,27 @@
+#include<stdio.h>
 #include "main.h"
-
 /**
- * puts2 - Prints every other character of a string, starting with the first
- * @str: Pointer to the input string
+ * _strcpy - copies the string pointed to by src,
  *
- * Description: This function prints every other character of the input
- * string, starting with the first character, followed by a new line.
+ * including the terminating null byte, to the
+ * buffer pointed to by dest.
+ *
+ * @dest: destination.
+ *
+ * @src: source
+ *
+ * Return: the pointer to dest
  */
-void puts2(char *str)
+
+char *_strcpy(char *dest, char *src)
 {
-	unsigned int i = 0;
-	unsigned int limit = 446; /* Adjust this limit as needed */
+	int length;
 
-	while (str[i] != '\0' && i < limit)
+	for (length =0; length >= 0; length++ )
 	{
-		/* Print characters at even indices */
-		_putchar(str[i]);
-		i += 2;
+		*(dest + length) = *(src + length);
+		if (*(src + length) == '\0')
+			break;
 	}
-
-	/* Print a new line at the end */
-	_putchar('\n');
+	return (dest);
 }
