@@ -1,18 +1,20 @@
 #include "main.h"
 /**
- * _strcat - concatenates two strings,
- * Return: to  (dest)
+ * _memset - fill a block of memory
+ * @s: starting address of memory
+ * @b: the desired value
+ * @n: member of bytes to be changed
+ *
+ * Return: Always value
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *original_s = s;
-	
-	while (n > 0)
+	unsigned int i = 0;
+
+	while (i < n)
 	{
-		*s = b;
-		s++;
-		n--;
+		*(s + i) = b;
+		i++;
 	}
-	return original_s;
+	return (s);
 }
